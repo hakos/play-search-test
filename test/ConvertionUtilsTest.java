@@ -51,6 +51,7 @@ public class ConvertionUtilsTest extends UnitTest {
 		assertEquals("Trondheim", 	document.getField("street.city.name").stringValue());
 		assertEquals("Norway", 		document.getField("street.city.region.country.name").stringValue());
 		assertEquals("Oslo", 		document.getField("street.city.region.country.capital.name").stringValue());
-		assertEquals(7, document.getFields().size()); // including _docID and allfield
+		assertEquals("Østlandet", 	document.getField("street.city.region.country.capital.region.name").stringValue());
+		assertEquals(8, document.getFields().size()); // including _docID and allfield
 	}
 }
